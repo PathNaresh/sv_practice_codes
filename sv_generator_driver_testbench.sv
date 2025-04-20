@@ -1,6 +1,5 @@
 // sequnece class - seqnce.sv file
 class seqnce;
-  
   randc logic [3:0] a;
   randc logic [3:0] b;
   
@@ -9,12 +8,10 @@ class seqnce;
   function void display(string name);
     $display("@time %0t [%0s] :: a : %0d b : %0d & out : %0d", $time, name, a, b, out);
   endfunction
-  
 endclass
 
 // generator class - generator.sv file 
 class generator;
-  
   // sequence instance & creating memory for it
   seqnce seq = new();
   
@@ -32,12 +29,10 @@ class generator;
     mbx.put(seq);
     seq.display("GENERATOR");
   endtask
-  
 endclass
 
 // driver class - driver.sv file
 class driver;
-  
   // sequnce instance
   seqnce seq;
   
@@ -55,7 +50,6 @@ class driver;
     seq.out = seq.a + seq.b;
     seq.display("DRIVER");
   endtask
-  
 endclass
 
 // top module 
