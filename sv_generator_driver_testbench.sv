@@ -58,7 +58,6 @@ endclass
 `include "driver.sv"
 
 module top;
-  
   // creating a mailbox
   mailbox mbx = new();
   
@@ -73,7 +72,6 @@ module top;
       drv.run();
     join
   end
-  
 endmodule
 
 // output - log
